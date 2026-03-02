@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   keywords: "sewa excavator, excavator Kalimantan Selatan, jasa konstruksi, sewa alat berat, Mulya Jaya Konstruksi",
   openGraph: {
     title: "Mulya Jaya Konstruksi",
-    description: "Sewa Excavator di Kalimantan Selatan",
+    description: "Mulya Jaya Konstruksi menawarkan sewa excavator standar dan long arm di Kalimantan Selatan. Kami menyediakan excavator berkualitas tinggi untuk proyek SDA, dengan pilihan ukuran dan panjang lengan yang sesuai dengan kebutuhan proyek Anda. Hubungi kami untuk informasi lebih lanjut.",
     url: "https://mjk-pi.vercel.app/", // Gantilah dengan URL situs Anda
     siteName: "Mulya Jaya Konstruksi",
     images: [
       {
-        url: "/og.png", // URL gambar untuk sharing
+        url: "/og.jpg", // URL gambar untuk sharing
         width: 1200,
         height: 630,
         alt: "Mulya Jaya Konstruksi",
