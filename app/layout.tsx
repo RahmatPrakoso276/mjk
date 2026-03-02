@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./styles/globals.css";
-import Head from 'next/head'; // Import Head component dari next/head
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -41,6 +39,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className="scroll-smooth">
+      <head>
+        <meta name="google-site-verification" content="Vf4fAaKv_9CPPyCjpNNW_8gUaIFyG8PC-fH_B1rcUZ0" />
+      </head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8ZDMJ7TH5"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N8ZDMJ7TH5');
+      </script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
