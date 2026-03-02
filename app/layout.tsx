@@ -42,11 +42,13 @@ export default function RootLayout({
       <head>
         <meta name="google-site-verification" content="Vf4fAaKv_9CPPyCjpNNW_8gUaIFyG8PC-fH_B1rcUZ0" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8ZDMJ7TH5"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-N8ZDMJ7TH5');
+        <script>{`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-N8ZDMJ7TH5');
+            `
+        }
         </script>
       </head>
       <body
