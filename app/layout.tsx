@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Mulya Jaya Konstruksi",
     images: [
       {
-        url: "/og.jpg", // URL gambar untuk sharing
+        url: "https://mjk-pi.vercel.app/og.jpg", // URL gambar untuk sharing
         width: 1200,
         height: 630,
         alt: "Mulya Jaya Konstruksi",
