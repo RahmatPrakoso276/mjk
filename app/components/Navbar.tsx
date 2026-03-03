@@ -44,7 +44,7 @@ export default function Navbars() {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Phone className="w-4 h-4" />
-              <span>+62 812-3456-7890</span>
+              <span>+62 812-5009-4111</span>
             </div>
           </div>
 
