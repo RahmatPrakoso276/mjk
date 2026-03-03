@@ -196,8 +196,8 @@ export default function Contact() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent text-black"
                   >
                     <option value="">Pilih jenis alat berat</option>
-                    <option value="excavator-mini">Excavator Standar</option>
-                    <option value="excavator-medium">Excavator Long Arm</option>
+                    <option value="Excavator Standar">Excavator Standar</option>
+                    <option value="Excavator Long Arm">Excavator Long Arm</option>
                   </select>
                 </div>
 
