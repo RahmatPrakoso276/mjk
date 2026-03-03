@@ -23,7 +23,7 @@ export default function Navbars() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="shrink-0">
-              <Image src="/logo.png" alt="MJK Logo" width={64} height={64} />
+              <Image src="/mjk-icon.png" alt="MJK Logo" width={64} height={64} />
             </Link>
           </div>
 

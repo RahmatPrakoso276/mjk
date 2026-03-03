@@ -1,9 +1,10 @@
 "use client";
 
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
-import { useState } from 'react';
-
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 export default function Contact() {
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,13 +13,6 @@ export default function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    alert('Terima kasih! Kami akan segera menghubungi Anda.');
-    setFormData({ name: '', email: '', phone: '', equipment: '', message: '' });
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -26,6 +20,27 @@ export default function Contact() {
     });
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Pastikan ID ini sesuai dengan Dashboard EmailJS Anda
+    emailjs.sendForm(
+      'service_hctvmpi',
+      'template_2d5vgqd',
+      form.current!,
+      { publicKey: 'j-NxdMQZjbwSEHFSP' }
+    )
+      .then(
+        () => {
+          alert('Terima kasih! Kami akan segera menghubungi Anda.');
+          // Reset form setelah sukses
+          setFormData({ name: '', email: '', phone: '', equipment: '', message: '' });
+        },
+        (error) => {
+          alert('Gagal mengirim: ' + error.text);
+        }
+      );
+  };
   return (
     <section id="contact" className="py-20 bg-white scroll-mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,7 +134,7 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Kirim Pesan
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Nama Lengkap
@@ -131,7 +146,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent text-black"
                     placeholder="Masukkan nama Anda"
                   />
                 </div>
@@ -147,7 +162,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent text-black"
                     placeholder="email@example.com"
                   />
                 </div>
@@ -163,7 +178,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent text-black"
                     placeholder="+62 812-3456-7890"
                   />
                 </div>
@@ -178,15 +193,11 @@ export default function Contact() {
                     value={formData.equipment}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent text-black"
                   >
                     <option value="">Pilih jenis alat berat</option>
-                    <option value="excavator-mini">Excavator Mini</option>
-                    <option value="excavator-medium">Excavator Medium</option>
-                    <option value="excavator-heavy">Excavator Heavy</option>
-                    <option value="bulldozer">Bulldozer</option>
-                    <option value="wheel-loader">Wheel Loader</option>
-                    <option value="long-reach">Long Reach Excavator</option>
+                    <option value="excavator-mini">Excavator Standar</option>
+                    <option value="excavator-medium">Excavator Long Arm</option>
                   </select>
                 </div>
 
@@ -201,7 +212,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent text-black"
                     placeholder="Ceritakan tentang kebutuhan proyek Anda..."
                   ></textarea>
                 </div>

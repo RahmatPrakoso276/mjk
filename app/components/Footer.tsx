@@ -18,9 +18,6 @@ export default function Footer() {
               <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition">
-                <Linkedin className="w-5 h-5" />
-              </a>
             </div>
           </div>
 
@@ -54,19 +51,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Layanan</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-yellow-600 transition">Rental Excavator</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-yellow-600 transition">Rental Bulldozer</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-yellow-600 transition">Rental Wheel Loader</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-yellow-600 transition">Operator Service</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-yellow-600 transition">Konsultasi Proyek</a>
+                <span className="hover:text-yellow-600 transition">Rental Excavator</span>
               </li>
             </ul>
           </div>
@@ -82,7 +67,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-yellow-600 shrink-0" />
-                <span>+62 812-3456-7890</span>
+                <span>+62 812-5009-4111</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-yellow-600 shrink-0" />
