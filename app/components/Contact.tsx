@@ -42,15 +42,17 @@ export default function Contact() {
       );
   };
   return (
-    <section id="contact" className="py-20 bg-white scroll-mt-10">
+    <section id="contact" aria-labelledby="contact-heading"
+      className="py-20 bg-white scroll-mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Hubungi Kami
+            Konsultasi & Rental Excavator
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Siap membantu kebutuhan rental alat berat Anda. Hubungi kami untuk konsultasi dan penawaran terbaik
+            Hubungi tim Mulya Jaya Konstruksi untuk kebutuhan rental excavator
+            dan alat berat untuk proyek konstruksi, tanggul, maupun normalisasi sungai.
           </p>
         </div>
 
@@ -69,9 +71,9 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Alamat</h4>
                   <p className="text-gray-600">
-                    Jl. Trikora KM.7, kel.guntung manggis, kec.landasan ulin, banjarbaru
-                    <br />
-                    Banjarbaru, Kalimantan Selatan.
+                    Jl. Trikora KM 7, Kelurahan Guntung Manggis,<br />
+                    Kecamatan Landasan Ulin,<br />
+                    Banjarbaru, Kalimantan Selatan, Indonesia
                   </p>
                 </div>
               </div>
@@ -125,6 +127,7 @@ export default function Contact() {
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                title="Lokasi Kantor Mulya Jaya Konstruksi"
               ></iframe>
             </div>          </div>
 
@@ -189,7 +192,7 @@ export default function Contact() {
                   </label>
                   <select
                     id="equipment"
-                    name="equipment"
+                    name="jenis_alat_bera"
                     value={formData.equipment}
                     onChange={handleChange}
                     required

@@ -53,6 +53,28 @@ export default function RootLayout({
             `
         }
         </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Mulya Jaya Konstruksi",
+              telephone: "+6281250094111",
+              email: "cv.mulyajayakonstruksi@gmail.com",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Jl. Trikora KM 7",
+                addressLocality: "Banjarbaru",
+                addressRegion: "Kalimantan Selatan",
+                addressCountry: "ID"
+              },
+              openingHours: "Mo-Fr 08:00-17:00 Sa 08:00-14:00"
+            })
+          }}
+        />
+
+        🔥 Ini efek
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

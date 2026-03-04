@@ -17,29 +17,31 @@ const fleetData = [
     fuelType: 'Solar',
     year: '2015-2020',
     unit: '7 Unit',
-    description: 'Ideals untuk normalisasi sungai, pengerukan sedimentasi, dan pekerjaan tanggul dengan jangkauan lebih panjang'
+    description: 'Ideal untuk normalisasi sungai, pengerukan sedimentasi, dan pekerjaan tanggul dengan jangkauan lebih panjang'
   },
 
 ];
 
 export default function Armada() {
   return (
-    <section id="armada" className="py-20 bg-gray-50 scroll-mt-10">
+    <section id="armada" aria-labelledby="armada-heading"
+      className="py-20 bg-gray-50 scroll-mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Armada Kami
+            Armada Excavator Kami
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Berbagai jenis alat berat dengan kondisi prima dan teknologi terkini siap mendukung proyek Anda
+            Pilihan unit rental excavator dan alat berat di Banjarbaru
+            dengan kondisi prima dan siap kerja untuk proyek konstruksi dan sungai.
           </p>
         </div>
 
         {/* Fleet Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
           {fleetData.map((equipment, index) => (
-            <div
+            <article
               key={index}
               className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
@@ -47,7 +49,7 @@ export default function Armada() {
               <div className="relative h-84 overflow-hidden">
                 <Image
                   src={equipment.image}
-                  alt={equipment.name}
+                  alt={`${equipment.name} Rental Excavator Mulya Jaya Konstruksi di Banjarbaru`}
                   width={1080}
                   height={600}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
@@ -94,7 +96,7 @@ export default function Armada() {
                   Hubungi Untuk Harga
                 </a>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

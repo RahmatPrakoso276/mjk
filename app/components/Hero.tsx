@@ -3,12 +3,12 @@ import { ArrowRight, Award, Users, Wrench } from 'lucide-react';
 import Image from 'next/image';
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center py-32">
+    <section id="home" aria-labelledby="hero-heading" className="relative min-h-screen flex items-center py-32">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 ">
         <Image
           src="/hero.png"
-          alt="Excavator"
+          alt="Rental Excavator Profesional di Banjarbaru - Mulya Jaya Konstruksi"
           className="w-full h-full object-cover opacity-100"
           fill
         />
@@ -19,10 +19,11 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Solusi Rental Excavator Terpercaya
+            Rental Excavator Profesional di Banjarbaru Harga Terbaik & Siap Kerja
           </h1>
           <p className="text-xl text-gray-200 mb-8">
-            Menyediakan Excavator untuk pembangunan tanggul, normalisasi sungai, irigasi, drainase, dan pengerukan..
+            Menyediakan jasa rental excavator untuk pembangunan tanggul, normalisasi sungai, irigasi, drainase, dan pengerukan.
+            Melayani Banjarbaru, Banjarmasin, dan seluruh wilayah Kalimantan Selatan..
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a

@@ -3,17 +3,17 @@ import { CheckCircle, Target, Eye } from 'lucide-react';
 import Image from 'next/image';
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-gray-50 scroll-mt-20">
+    <section id="about" aria-labelledby="about-heading"
+      className="py-20 bg-gray-50 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="relative">
             <Image
               src="/basecamp.png"
-              alt="Heavy Equipment"
-              className="rounded-lg shadow-2xl"
-              width={650}
-              height={100}
+              alt="Rental Excavator Mulya Jaya Konstruksi di Banjarbaru untuk Proyek Sungai, Drainase, dan Irigasi"
+              className="rounded-lg shadow-2xl" width={650}
+              height={450}
             />
             <div className="absolute mr-5 -bottom-6 -right-6 bg-yellow-600 text-white p-8 rounded-lg shadow-xl">
               <p className="text-4xl font-bold">20+</p>
@@ -22,19 +22,16 @@ export default function About() {
           </div>
 
           {/* Content */}
-          <div className='text-justify'>
-            <h2 className="text-start md:text-justify text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Tentang Mulya Jaya Konstruksi
+          <article className='text-justify'>
+            <h2 id="about-heading" className="text-start md:text-justify text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Tentang Mulya Jaya Konstruksi – Rental Excavator & Alat Berat Profesional
             </h2>
             <p className="text-gray-600 mb-6">
               <span className="font-semibold">Mulya Jaya Konstruksi</span> adalah penyedia jasa
-              rental alat berat yang fokus mendukung
-              pekerjaan sungai dan saluran air.
-              Kami melayani pembangunan tanggul,
-              normalisasi sungai,
-              pengerukan sedimentasi,
-              pembuatan/rehabilitasi drainase, serta
-              pekerjaan irigasi di berbagai lokasi.
+              rental excavator dan alat berat yang berlokasi di Banjarbaru, Kalimantan Selatan.
+              Kami melayani Banjarbaru, Banjarmasin, dan wilayah sekitarnya untuk pekerjaan
+              sungai dan saluran air seperti pembangunan tanggul, normalisasi sungai,
+              pengerukan sedimentasi, serta rehabilitasi drainase dan irigasi.
             </p>
             <p className="text-gray-600 mb-8">
               Dengan pengalaman <span className="font-semibold">lebih dari 20 tahun</span>,
@@ -44,7 +41,9 @@ export default function About() {
               Unit siap kerja di lapangan untuk membantu proyek berjalan
               <span className="font-semibold"> aman, cepat, dan sesuai target</span>.
             </p>
-
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Keunggulan Kami
+            </h3>
             {/* Features */}
             <div className="space-y-4 mb-8">
               <div className="flex items-start space-x-3">
@@ -87,7 +86,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>

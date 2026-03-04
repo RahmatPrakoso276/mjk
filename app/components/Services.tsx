@@ -3,8 +3,8 @@ import { Bolt, Wrench, Clock, HeadphonesIcon, Shield, HardHat } from 'lucide-rea
 const services = [
   {
     icon: Bolt,
-    title: 'Rental Excavator',
-    description: 'Excavator siap kerja untuk percepat tanggul, normalisasi sungai, pengerukan, dan drainase proyek Anda.'
+    title: 'Rental Excavator Profesional',
+    description: 'Jasa rental excavator profesional di Kalimantan Selatan untuk tanggul, normalisasi sungai, pengerukan, dan drainase proyek Anda.'
   },
   {
     icon: HardHat,
@@ -35,22 +35,22 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 bg-white scroll-mt-10">
+    <section id="services" aria-labelledby="services-heading" className="py-20 bg-white scroll-mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Layanan Kami
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Solusi lengkap untuk kebutuhan rental alat berat dengan layanan profesional dan terpercaya
+            Solusi lengkap jasa rental excavator dan alat berat profesional di Kalimantan Selatan untuk proyek konstruksi, sungai, dan drainase.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
+            <article
               key={index}
               className="bg-gray-50 p-8 rounded-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
             >
@@ -63,17 +63,17 @@ export default function Services() {
               <p className="text-gray-600">
                 {service.description}
               </p>
-            </div>
+            </article>
           ))}
         </div>
 
         {/* CTA Section */}
         <div className="mt-16 bg-linear-to-r from-yellow-400 to-yellow-600 rounded-2xl p-8 md:p-12 text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Butuh Konsultasi untuk Proyek Anda?
+            Butuh Rental Excavator di Kalimantan Selatan?
           </h3>
           <p className="text-yellow-50 mb-8 max-w-2xl mx-auto">
-            Tim kami siap membantu menemukan solusi rental Excavator yang tepat untuk kebutuhan proyek Anda
+            Tim kami siap membantu menemukan solusi jasa rental excavator terbaik sesuai kebutuhan proyek Anda.
           </p>
           <a
             href="#contact"

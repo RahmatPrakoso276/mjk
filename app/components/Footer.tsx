@@ -8,14 +8,16 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold text-yellow-600 mb-4">Mulya Jaya Konstruksi</h3>
-            <p className="text-gray-400 mb-4 text-sm">
-              Solusi rental alat berat terpercaya untuk kebutuhan konstruksi, pertambangan, dan infrastruktur Anda.
+            <p className="text-gray-400 mb-4 text-xs">
+              Mulya Jaya Konstruksi merupakan penyedia layanan rental excavator
+              dan alat berat untuk proyek konstruksi, pembangunan tanggul,
+              normalisasi sungai, serta pekerjaan infrastruktur lainnya.
             </p>
             <div className="flex space-x-4 ">
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition">
+              <a href="#" aria-label="Facebook Mulya Jaya Konstruksi" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition">
+              <a href="#" aria-label="Instagram Mulya Jaya Konstruksi" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -51,7 +53,16 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Layanan</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <span className="hover:text-yellow-600 transition">Rental Excavator</span>
+                <span className="hover:text-yellow-600 transition">Rental Excavator Standar</span>
+              </li>
+              <li>
+                <span className="hover:text-yellow-600 transition">Rental Excavator Long Arm</span>
+              </li>
+              <li>
+                <span className="hover:text-yellow-600 transition">Pekerjaan Normalisasi Sungai</span>
+              </li>
+              <li>
+                <span className="hover:text-yellow-600 transition">Pembangunan Tanggul & Drainase</span>
               </li>
             </ul>
           </div>
@@ -62,8 +73,9 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-yellow-600 shrink-0 mt-1" />
-                <span>Jl. Trikora KM.7, kel.guntung manggis, kec.landasan ulin, banjarbaru
-                  Banjarbaru, Kalimantan Selatan.</span>
+                <span>Jl. Trikora KM 7, Kelurahan Guntung Manggis
+                  Kecamatan Landasan Ulin
+                  Banjarbaru, Kalimantan Selatan, Indonesia</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-yellow-600 shrink-0" />

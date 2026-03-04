@@ -10,7 +10,7 @@ const projects = [
     title: 'Pembangunan tanggul',
     location: 'Kalimantan Selatan',
     year: '2024',
-    description: 'Proyek pembangunan tanggul dengan penggunaan excavator medium '
+    description: 'Pekerjaan pembangunan tanggul sungai untuk pengendalian banjir dengan penggunaan excavator medium dan long arm dalam proses penggalian serta pembentukan struktur tanah.'
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const projects = [
     title: 'Pembangunan tanggul',
     location: 'Kalimantan Selatan',
     year: '2024',
-    description: 'Proyek pembangunan tanggul dengan penggunaan excavator medium '
+    description: 'Proyek normalisasi sungai yang meliputi pengerukan sedimentasi dan pelebaran alur sungai guna meningkatkan kapasitas aliran air saat musim hujan.'
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const projects = [
     title: 'Pembangunan tanggul',
     location: 'Kalimantan Selatan',
     year: '2024',
-    description: 'Proyek pembangunan tanggul dengan penggunaan excavator medium '
+    description: 'Pembangunan sistem drainase kawasan industri menggunakan excavator 10 ton untuk memastikan aliran air berjalan optimal dan mencegah genangan.'
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const projects = [
     title: 'Pembangunan tanggul',
     location: 'Kalimantan Selatan',
     year: '2024',
-    description: 'Proyek pembangunan tanggul dengan penggunaan excavator medium '
+    description: 'Pembuatan tanggul pelindung kawasan perumahan untuk mengantisipasi luapan air sungai dengan metode pemadatan tanah bertahap.'
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const projects = [
     title: 'Pembangunan tanggul',
     location: 'Kalimantan Selatan',
     year: '2024',
-    description: 'Proyek pembangunan tanggul dengan penggunaan excavator medium '
+    description: 'Pekerjaan pengerukan dan pembersihan saluran irigasi guna meningkatkan distribusi air ke area pertanian dan mengurangi sedimentasi.'
   },
   {
     id: 6,
@@ -50,7 +50,7 @@ const projects = [
     title: 'Pembangunan tanggul',
     location: 'Kalimantan Selatan',
     year: '2024',
-    description: 'Proyek pembangunan tanggul dengan penggunaan excavator medium '
+    description: 'Proses cut and fill serta perataan lahan untuk pembangunan gedung perkantoran menggunakan excavator medium dengan efisiensi waktu kerja tinggi.'
   },
   {
     id: 7,
@@ -58,7 +58,7 @@ const projects = [
     title: 'Pembangunan tanggul',
     location: 'Kalimantan Selatan',
     year: '2024',
-    description: 'Proyek pembangunan tanggul dengan penggunaan excavator medium '
+    description: 'Pembuatan tanggul sementara untuk mendukung proses konstruksi dan pengamanan area proyek dari potensi limpasan air.'
   },
   {
     id: 8,
@@ -66,21 +66,21 @@ const projects = [
     title: 'Pembangunan tanggul',
     location: 'Kalimantan Selatan',
     year: '2024',
-    description: 'Proyek pembangunan gedung perkantoran dengan penggunaan excavator medium '
+    description: 'Pekerjaan peningkatan infrastruktur sungai melalui pengerukan dan pembentukan struktur tebing guna memperkuat daya tahan terhadap erosi.'
   },
-  
+
 ];
 
 export default function Gallery() {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
   return (
-    <section id="gallery" className="py-20 bg-white scroll-mt-10">
+    <section id="gallery" aria-labelledby="gallery-heading" className="py-20 bg-white scroll-mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Galeri Proyek
+            Dokumentasi Proyek & Pekerjaan
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Berbagai proyek konstruksi dan infrastruktur yang telah kami dukung dengan armada alat berat kami
@@ -90,14 +90,14 @@ export default function Gallery() {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project) => (
-            <div
+            <article
               key={project.id}
               onClick={() => setSelectedProject(project)}
               className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
               <Image
                 src={project.image}
-                alt={project.title}
+                alt={`${project.title} - Dokumentasi Proyek Mulya Jaya Konstruksi`}
                 fill
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
@@ -112,13 +112,15 @@ export default function Gallery() {
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
         {/* Modal */}
         {selectedProject && (
           <div
+            role="dialog"
+            aria-modal="true"
             className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedProject(null)}
           >
@@ -138,7 +140,7 @@ export default function Gallery() {
               <div className="relative h-96">
                 <Image
                   src={selectedProject.image}
-                  alt={selectedProject.title}
+                  alt={`${selectedProject.title} - Dokumentasi Proyek Mulya Jaya Konstruksi`}
                   className="w-full h-full object-cover"
                   fill
                 />
@@ -179,12 +181,12 @@ export default function Gallery() {
         <div className="mt-16 bg-linear-to-r from-yellow-500 to-yellow-600 rounded-2xl p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
             <div>
-              <h4 className="text-4xl font-bold mb-2">200+</h4>
+              <h4 className="text-4xl font-bold mb-2">150++</h4>
               <p className="text-yellow-50">Proyek Diselesaikan</p>
             </div>
             <div>
               <h4 className="text-4xl font-bold mb-2">50+</h4>
-              <p className="text-yellow-50">Klien Perusahaan</p>
+              <p className="text-yellow-50">Klien Swasta & Pemerintah</p>
             </div>
             <div>
               <h4 className="text-4xl font-bold mb-2">100%</h4>
@@ -193,6 +195,6 @@ export default function Gallery() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
