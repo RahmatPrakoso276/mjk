@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
 
   icons: {
-    icon: "/mjk-icon.png",
+    icon: "/mjk-icon.ico",
   },
 
   alternates: {
