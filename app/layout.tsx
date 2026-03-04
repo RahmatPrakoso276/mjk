@@ -12,20 +12,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mulya Jaya Konstruksi",
+  metadataBase: new URL("https://www.mulyajayakonstruksi.com"),
+
+
+  title: "Sewa Excavator Kalimantan Selatan | Mulya Jaya Konstruksi",
   description: "Sewa Excavator di Kalimantan Selatan",
-  keywords: "sewa excavator, excavator Kalimantan Selatan, jasa konstruksi, sewa alat berat, Mulya Jaya Konstruksi",
+  keywords: [
+    "sewa excavator Kalimantan Selatan",
+    "rental excavator Kalsel",
+    "jasa sewa alat berat",
+    "excavator long arm",
+    "Mulya Jaya Konstruksi",
+  ],
+
   icons: {
     icon: "/mjk-icon.png",
   },
+
+  alternates: {
+    canonical: "/",
+  },
+
   openGraph: {
     title: "Mulya Jaya Konstruksi",
     description: "Mulya Jaya Konstruksi menawarkan sewa excavator standar dan long arm di Kalimantan Selatan. Kami menyediakan excavator berkualitas tinggi untuk proyek SDA, dengan pilihan ukuran dan panjang lengan yang sesuai dengan kebutuhan proyek Anda. Hubungi kami untuk informasi lebih lanjut.",
-    url: "https://mulyajayakonstruksi.com/", // Gantilah dengan URL situs Anda
+    url: "https://www.mulyajayakonstruksi.com/", // Gantilah dengan URL situs Anda
     siteName: "Mulya Jaya Konstruksi",
     images: [
       {
-        url: "https://mulyajayakonstruksi.com/og.jpg", // URL gambar untuk sharing
+        url: "https://www.mulyajayakonstruksi.com/og.jpg", // URL gambar untuk sharing
         width: 1200,
         height: 630,
         alt: "Mulya Jaya Konstruksi",
