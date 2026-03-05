@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, MapPin, Calendar } from 'lucide-react';
 import Image from 'next/image';
 const projects = [
@@ -74,6 +74,14 @@ const projects = [
 export default function Gallery() {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedProject(null);
+    };
+    if (selectedProject) document.addEventListener('keydown', handleEsc);
+    return () => document.removeEventListener('keydown', handleEsc);
+  }, [selectedProject]);
+
   return (
     <section id="gallery" aria-labelledby="gallery-heading" className="py-20 bg-white scroll-mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -131,6 +139,7 @@ export default function Gallery() {
               {/* Close Button */}
               <button
                 onClick={() => setSelectedProject(null)}
+                aria-label="Tutup galeri"
                 className="absolute top-4 right-4 bg-white rounded-full p-2 hover:bg-gray-100 transition z-10"
               >
                 <X className="w-6 h-6 text-gray-900" />

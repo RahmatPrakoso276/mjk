@@ -89,7 +89,6 @@ export default function RootLayout({
           }}
         />
 
-        🔥 Ini efek
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

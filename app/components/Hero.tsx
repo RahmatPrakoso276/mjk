@@ -11,6 +11,7 @@ export default function Hero() {
           alt="Rental Excavator Profesional di Banjarbaru - Mulya Jaya Konstruksi"
           className="w-full h-full object-cover opacity-100"
           fill
+          priority
         />
         <div className="absolute inset-0 bg-linear-to-r from-black/70 to-black/50"></div>
       </div>

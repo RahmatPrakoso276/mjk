@@ -12,6 +12,8 @@ export default function Contact() {
     equipment: '',
     message: ''
   });
+  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [formMessage, setFormMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -22,8 +24,9 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setFormStatus('loading');
+    setFormMessage('');
 
-    // Pastikan ID ini sesuai dengan Dashboard EmailJS Anda
     emailjs.sendForm(
       'service_hctvmpi',
       'template_2d5vgqd',
@@ -32,12 +35,13 @@ export default function Contact() {
     )
       .then(
         () => {
-          alert('Terima kasih! Kami akan segera menghubungi Anda.');
-          // Reset form setelah sukses
+          setFormStatus('success');
+          setFormMessage('Terima kasih! Pesan Anda telah terkirim. Tim kami akan segera menghubungi Anda.');
           setFormData({ name: '', email: '', phone: '', equipment: '', message: '' });
         },
         (error) => {
-          alert('Gagal mengirim: ' + error.text);
+          setFormStatus('error');
+          setFormMessage('Gagal mengirim pesan. Silakan coba lagi atau hubungi kami langsung via WhatsApp. (' + error.text + ')');
         }
       );
   };
@@ -192,7 +196,7 @@ export default function Contact() {
                   </label>
                   <select
                     id="equipment"
-                    name="jenis_alat_bera"
+                    name="equipment"
                     value={formData.equipment}
                     onChange={handleChange}
                     required
@@ -222,11 +226,24 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-4 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition flex items-center justify-center space-x-2"
+                  disabled={formStatus === 'loading'}
+                  className="w-full px-6 py-4 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   <Send className="w-5 h-5" />
-                  <span>Kirim Pesan</span>
+                  <span>{formStatus === 'loading' ? 'Mengirim...' : 'Kirim Pesan'}</span>
                 </button>
+
+                {/* Inline Feedback */}
+                {formStatus === 'success' && (
+                  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
+                    ✅ {formMessage}
+                  </div>
+                )}
+                {formStatus === 'error' && (
+                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm">
+                    ❌ {formMessage}
+                  </div>
+                )}
               </form>
             </div>
           </div>
