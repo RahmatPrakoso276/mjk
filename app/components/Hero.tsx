@@ -19,10 +19,10 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-2xl md:text-6xl font-bold text-white mb-6">
             Rental Excavator Profesional di Banjarbaru Harga Terbaik & Siap Kerja
           </h1>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-sm md:text-xl text-gray-200 mb-8">
             Menyediakan jasa rental excavator untuk pembangunan tanggul, normalisasi sungai, irigasi, drainase, dan pengerukan.
             Melayani Banjarbaru, Banjarmasin, dan seluruh wilayah Kalimantan Selatan..
           </p>

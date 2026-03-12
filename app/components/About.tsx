@@ -10,7 +10,7 @@ export default function About() {
           {/* Image */}
           <div className="relative">
             <Image
-              src="/basecamp.png"
+              src="/mjkabout.jpeg"
               alt="Rental Excavator Mulya Jaya Konstruksi di Banjarbaru untuk Proyek Sungai, Drainase, dan Irigasi"
               className="rounded-lg shadow-2xl" width={650}
               height={450}
